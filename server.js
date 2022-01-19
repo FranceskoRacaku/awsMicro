@@ -27,7 +27,7 @@ app.use('/purchasess', purchaseRouter)
 
 app.set("view engine", "ejs");
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
 
     res.render("main");
 })
