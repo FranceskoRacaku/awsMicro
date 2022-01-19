@@ -1,7 +1,7 @@
 module.exports = {
-    HOST: 'ec2-107-21-211-154.compute-1.amazonaws.com', // your endpoint
-    USER: 'frqzziuzimynkj', // your username
-    PASSWORD: '899b0f68800c6e724bac8f7be4ac953c2b66fd09a47e075e986fef6f8bee2c32', // your password
-    DB: 'da4l9l55moeqd', // your db name
+    HOST: 'ec2-174-129-37-144.compute-1.amazonaws.com', // your endpoint
+    USER: 'ulsdmvjeckdeys', // your username
+    PASSWORD: '80ea567265ecedca9f6eec88432636cd32058621cd04f7606b69d180345e3d3e', // your password
+    DB: 'dbg0rnmt9i1l1i', // your db name
     dialect: 'postgres',
 }
