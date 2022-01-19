@@ -33,8 +33,11 @@ app.get('/', (req, res) => {
 })
 
 app.get("/funds", (req,res) => {
+    const myData = data.filter((d) => {
+        return d.fundId === req.params.fundId;
+    })[0]
     
-        res.render("funds");
+        res.render("funds", {data: myData});
     
 });
 
