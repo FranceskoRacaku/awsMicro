@@ -1,8 +1,6 @@
 const express = require('express')
 const querystring = require("querystring");
 var session = require('express-session');
-const { process_params } = require("express/lib/router");
-const { URLSearchParams } = require("url");
 const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true}));
@@ -15,42 +13,17 @@ const port = process.env.PORT || 3000
 // app.use('/holds', holdRouter);
 
 const fundRouter = require('./routes/fundRouter.js')
-app.use('/fundss', fundRouter)
+app.use('/funds', fundRouter)
 
 const userRouter = require('./routes/userRouter.js')
-app.use('/userss', userRouter)
+app.use('/users', userRouter)
 
 const purchaseRouter = require('./routes/purchaseRouter.js')
-app.use('/purchasess', purchaseRouter)
+app.use('/purchases', purchaseRouter)
 
-
-
-app.set("view engine", "ejs");
-
-app.get('/', async (req, res) => {
-
-    res.render("main");
+app.get("/", (req, res)=>{
+    res.send("hello world");
 })
-
-app.get("/funds", (req,res) => {
-    const myData = data.filter((d) => {
-        return d.fundId === req.params.fundId;
-    })[0]
-    
-        res.render("funds", {data: myData});
-    
-});
-
-app.get("/purchases", (req,res) => {
-
-        res.render("purchases");
-});
-
-app.get("/users", (req,res) => {
-
-        res.render("users");
-    
-});
 
 app.listen(port, () => {
 console.log(`App listening at http://localhost:${port}`)
