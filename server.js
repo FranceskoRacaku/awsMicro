@@ -2,13 +2,15 @@ const express = require('express')
 const querystring = require("querystring");
 var session = require('express-session');
 const app = express();
+var cors = require('cors');
+app.use(cors({origin: "http://localhost:4200", credentials: true, optionalSuccessStatus: 200}))
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
-var cors = require('cors');
 
 
-app.use(cors({origin: "http://localhost:4200", credentials: true, optionalSuccessStatus: 200}))
+
+
 
 // app.use(function(req, res, next) {
 //     res.setHeader('Access-Control-Allow-Origin', '*');
