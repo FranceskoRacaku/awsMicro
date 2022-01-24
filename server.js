@@ -5,7 +5,10 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
+var cors = require('cors');
 
+
+app.use(cors());
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
