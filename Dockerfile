@@ -1,4 +1,4 @@
-FROM node:latest
+FROM python:latest
 
 # WORKDIR /usr/src/www
 
@@ -9,10 +9,15 @@ FROM node:latest
 # COPY . .
 
 # RUN npm install
+RUN apt-get update
+RUN apt-get -y install python
 
-
+RUN mkdir -p /data
+WORKDIR /data
 # EXPOSE 5280
+COPY /dist/house .
 
+EXPOSE 8222
 # CMD ["npm", "run", "start"]
-
+CMD python -m http.server 8222
 

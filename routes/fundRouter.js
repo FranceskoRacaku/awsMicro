@@ -13,7 +13,7 @@ router.get('/', fundController.getAllFunds)
 router.get('/:id', fundController.getOneFund)
 
 // modify one fund by id
-router.put('/:id', fundController.updateFund)
+router.patch('/:id', fundController.updateFund)
 
 // delete one fund by id
 router.delete('/:id', fundController.deleteFund)

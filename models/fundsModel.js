@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
 
     const Fund = sequelize.define('fund', {
-        id: { // the id will be our primary key for accessing customer data
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            allowNull: false,
-            primaryKey: true
-        },
+        // id: { // the id will be our primary key for accessing customer data
+        //     type: DataTypes.INTEGER,
+        //     autoIncrement: true,
+        //     allowNull: false,
+        //     primaryKey: true
+        // },
         symbol: {
             type: DataTypes.STRING,
             allowNull: false,
