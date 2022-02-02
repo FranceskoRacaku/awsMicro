@@ -7,7 +7,7 @@ const Purchase = db.Purchases
 const addPurchase = async (req, res) => {
     let input_data = {
         amount: req.body.amount,
-        fundId: +req.body.fundId,
+        fundId: Number(req.body.fundId),
         userId: req.body.userId
         }
 
