@@ -13,7 +13,7 @@ router.get('/', purchaseController.getAllPurchases)
 router.get('/:id', purchaseController.getOnePurchase)
 
 // modify one user by id
-router.put('/:id', purchaseController.updatePurchase)
+router.patch('/:id', purchaseController.updatePurchase)
 
 // delete one user by id
 router.delete('/:id', purchaseController.deletePurchase)

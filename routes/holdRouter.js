@@ -13,7 +13,7 @@
 // router.get('/:id', holdController.getOneHold)
 
 // // modify one hold by id
-// router.put('/:id', holdController.updateHold)
+// router.patch('/:id', holdController.updateHold)
 
 // // delete one hold by id
 // router.delete('/:id', holdController.deleteHold)

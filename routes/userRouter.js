@@ -13,7 +13,7 @@ router.get('/', userController.getAllUsers)
 router.get('/:id', userController.getOneUser)
 
 // modify one user by id
-router.put('/:id', userController.updateUser)
+router.patch('/:id', userController.updateUser)
 
 // delete one user by id
 router.delete('/:id', userController.deleteUser)
