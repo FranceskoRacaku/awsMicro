@@ -28,6 +28,7 @@ const getAllPurchases = async (req, res) => {
 
     // using the builtin 'findOne' function on User Model
     let purchases = await Purchase.findAll({
+        where: {userId: userId},
         attributes:{exclude:['updatedAt','createdAt']},
     })
     res.status(200).send(purchases)
