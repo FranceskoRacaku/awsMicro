@@ -1,4 +1,3 @@
-const { route } = require('express/lib/application')
 const purchaseController = require('../controllers/purchaseController.js')
 
 // create a Router object from express
@@ -18,8 +17,5 @@ router.patch('/:id', purchaseController.updatePurchase)
 
 // delete one user by id
 router.delete('/:id', purchaseController.deletePurchase)
-
-//by userId
-route.get('/byuser/:userId', purchaseController.getPurchasesByUserId);
 
 module.exports = router
