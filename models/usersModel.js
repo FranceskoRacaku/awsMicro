@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define('user', {
         id: { // the id will be our primary key for accessing customer data
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             autoIncrement: true,
             allowNull: false,
             primaryKey: true
