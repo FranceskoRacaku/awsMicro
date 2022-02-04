@@ -7,7 +7,7 @@ const router = require('express').Router()
 router.post('/', purchaseController.addPurchase)
 
 // access all the users in the table
-router.get('/:userId', purchaseController.getAllPurchases)
+router.get('/', purchaseController.getAllPurchases)
 
 // access one user by id
 router.get('/:id', purchaseController.getOnePurchase)
@@ -18,8 +18,7 @@ router.patch('/:id', purchaseController.updatePurchase)
 // delete one user by id
 router.delete('/:id', purchaseController.deletePurchase)
 
-
-
-
+// access all the users in the table
+router.get('/:userId', purchaseController.getAllPurchasesByUser)
 
 module.exports = router

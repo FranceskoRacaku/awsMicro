@@ -25,6 +25,16 @@ const addPurchase = async (req, res) => {
 
 
 const getAllPurchases = async (req, res) => {
+
+    // using the builtin 'findOne' function on User Model
+    let purchases = await Purchase.findAll({
+        attributes:{exclude:['updatedAt','createdAt']},
+    })
+    res.status(200).send(purchases)
+}            
+
+
+const getAllPurchasesByUser = async (req, res) => {
     let userId = req.params.userId
 
     // using the builtin 'findOne' function on User Model
@@ -33,7 +43,7 @@ const getAllPurchases = async (req, res) => {
         attributes:{exclude:['updatedAt','createdAt']},
     })
     res.status(200).send(purchases)
-}                  
+}   
 
 const getOnePurchase = async (req, res) => {
 
@@ -68,5 +78,6 @@ module.exports = {
     getAllPurchases,
     getOnePurchase,
     updatePurchase,
+    getAllPurchasesByUser,
     deletePurchase
 }
