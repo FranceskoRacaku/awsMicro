@@ -10,7 +10,7 @@ router.post('/', purchaseController.addPurchase)
 router.get('/', purchaseController.getAllPurchases)
 
 // access all the users in the table
-router.get('/:userId', purchaseController.getAllPurchasesByUser)
+router.get('/user/:userId', purchaseController.getAllPurchasesByUser)
 
 
 // access one user by id
