@@ -6,6 +6,7 @@ const User = db.Users
 
 const addUser = async (req, res) => {
     let input_data = {
+        id: req.body.id,
         userName: req.body.userName,
         userEmail: req.body.userEmail,
         userAge: req.body.userAge,
