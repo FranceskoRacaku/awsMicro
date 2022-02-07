@@ -29,8 +29,8 @@ const port = process.env.PORT || 3000
 const fundRouter = require('./routes/fundRouter.js')
 app.use('/funds', fundRouter)
 
-const userRouter = require('./routes/userRouter.js')
-app.use('/users', userRouter)
+// const userRouter = require('./routes/userRouter.js')
+// app.use('/users', userRouter)
 
 const purchaseRouter = require('./routes/purchaseRouter.js')
 app.use('/purchases', purchaseRouter)

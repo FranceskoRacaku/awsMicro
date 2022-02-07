@@ -1,21 +1,21 @@
-const userController = require('../controllers/userController.js')
+// const userController = require('../controllers/userController.js')
 
-// create a Router object from express
-const router = require('express').Router()
+// // create a Router object from express
+// const router = require('express').Router()
 
-// add a new user to the table
-router.post('/', userController.addUser)
+// // add a new user to the table
+// router.post('/', userController.addUser)
 
-// access all the users in the table
-router.get('/', userController.getAllUsers)
+// // access all the users in the table
+// router.get('/', userController.getAllUsers)
 
-// access one user by id
-router.get('/:id', userController.getOneUser)
+// // access one user by id
+// router.get('/:id', userController.getOneUser)
 
-// modify one user by id
-router.patch('/:id', userController.updateUser)
+// // modify one user by id
+// router.patch('/:id', userController.updateUser)
 
-// delete one user by id
-router.delete('/:id', userController.deleteUser)
+// // delete one user by id
+// router.delete('/:id', userController.deleteUser)
 
-module.exports = router
+// module.exports = router

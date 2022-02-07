@@ -54,12 +54,12 @@ db.Sequelize = Sequelize;
 // get the cusomters model - our table name will be cusomters as set in the following line
 db.Funds = require('./fundsModel')(sequelize, DataTypes)
 // db.Holds = require('./holdsModel')(sequelize, DataTypes)
-db.Users = require('./usersModel')(sequelize, DataTypes)
+// db.Users = require('./usersModel')(sequelize, DataTypes)
 db.Purchases = require('./purchasesModel')(sequelize, DataTypes)
 
 // sync the db by running the model
 // force: false ensure that the table is not created again on every time the program runs
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: true }).then(() => {
     console.log('DB synced with sequelize')
 }).catch((error) => {
     console.log('Error syncing the DB to sequelize' + error)
