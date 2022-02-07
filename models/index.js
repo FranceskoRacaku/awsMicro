@@ -65,27 +65,15 @@ db.sequelize.sync({ force: false }).then(() => {
     console.log('Error syncing the DB to sequelize' + error)
 })
 
-db.Purchases.belongsTo(db.Funds, {through: db.Users});
+
+// db.Purchases.belongsTo(db.Funds, {through: db.Users});
+db.Purchases.belongsTo(db.Funds);
 db.Funds.hasMany(db.Purchases);
 
-db.Users.hasMany(db.Purchases);
-db.Purchases.belongsTo(db.Users);
-
-
-// db.Holds.hasMany(db.Users);
-// db.Users.belongsTo(db.Holds);
-
-
 // db.Users.hasMany(db.Purchases);
-// db.Purchases.hasMany(db.Funds);
-// db.Funds.belongsTo(db.Purchases);
 // db.Purchases.belongsTo(db.Users);
 
-// db.Users.belongsToMany(db.Funds, {through: db.Purchases});
 
-
-// db.Holds.hasMany(db.Users);
-// db.Users.belongsTo(db.Holds);
 
 
 module.exports = db
