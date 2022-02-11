@@ -26,11 +26,11 @@ module.exports = (sequelize, DataTypes) => {
         }, 
 
         previousBalance: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         }, 
         updatedBalance: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         }, 
 
