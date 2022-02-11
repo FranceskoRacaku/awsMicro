@@ -9,11 +9,6 @@ module.exports = (sequelize, DataTypes) => {
             unique: true
         },
 
-        purchaseId:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-
         amount: {
             type: DataTypes.FLOAT,
             allowNull: false,

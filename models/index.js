@@ -68,7 +68,7 @@ db.sequelize.sync({ force: false }).then(() => {
 
 
 // db.Purchases.belongsTo(db.Funds, {through: db.Users});
-db.Sells.belongsTo(db.Purchases);
+db.Sells.hasMany(db.Purchases);
 db.Purchases.hasMany(db.Sells);
 
 db.Purchases.belongsTo(db.Funds);

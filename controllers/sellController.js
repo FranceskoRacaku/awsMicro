@@ -6,7 +6,6 @@ const Sell = db.Sells
 
 const addSell = async (req, res) => {
     let input_data = {
-        purchaseId: req.body.purchaseId,
         amount: req.body.amount,
         fundId: req.body.fundId,
         userId: req.body.userId
