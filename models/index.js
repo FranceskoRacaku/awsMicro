@@ -56,6 +56,7 @@ db.Funds = require('./fundsModel')(sequelize, DataTypes)
 // db.Holds = require('./holdsModel')(sequelize, DataTypes)
 // db.Users = require('./usersModel')(sequelize, DataTypes)
 db.Purchases = require('./purchasesModel')(sequelize, DataTypes)
+db.Sells = require('./sellModel')(sequelize, DataTypes)
 
 // sync the db by running the model
 // force: false ensure that the table is not created again on every time the program runs
@@ -67,6 +68,9 @@ db.sequelize.sync({ force: false }).then(() => {
 
 
 // db.Purchases.belongsTo(db.Funds, {through: db.Users});
+db.Sells.belongsTo(db.Purchases);
+db.Purchases.hasMany(db.Sells);
+
 db.Purchases.belongsTo(db.Funds);
 db.Funds.hasMany(db.Purchases);
 

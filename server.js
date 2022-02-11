@@ -35,6 +35,9 @@ app.use('/funds', fundRouter)
 const purchaseRouter = require('./routes/purchaseRouter.js')
 app.use('/purchases', purchaseRouter)
 
+const sellRouter = require('./routes/sellRouter.js')
+app.use('/sells', sellRouter)
+
 
 app.get("/", (req, res)=>{
     res.send("hello world");
