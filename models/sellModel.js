@@ -25,6 +25,15 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         }, 
 
+        previousBalance: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }, 
+        updatedBalance: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }, 
+
     });
     return Sell
 }
