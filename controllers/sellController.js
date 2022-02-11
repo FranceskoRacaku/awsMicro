@@ -10,7 +10,6 @@ const addSell = async (req, res) => {
         fundId: req.body.fundId,
         userId: req.body.userId,
         previousBalance: req.body.previousBalance,
-        updatedBalance: req.body.updatedBalance
         }
 
         // using the builtin 'create' function on User Model
