@@ -29,10 +29,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         }, 
-        updatedBalance: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }, 
 
     });
     return Sell
